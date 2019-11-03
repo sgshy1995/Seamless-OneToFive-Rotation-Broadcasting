@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.windows{
+    width: 400px;
+    height: 300px;
+    margin: 40px auto;
+    overflow: hidden;
+}
+.windows .images{
+   position: relative;
+}
+.windows .images img{
+    width: 100%;
+    transition: all 0.5s;
+    position: absolute;
+    top: 0;
+}
+.windows .images img.current{
+    left: 0;
+    transform: translateX(0);
+    z-index: 1; 
+}
+.windows .images img.leave{
+    transform: translateX(-100%);
+    z-index: 1;
+}
+.windows .images img.enter{
+    transform: translateX(100%);
+}
